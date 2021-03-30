@@ -2,10 +2,10 @@
 <html>
     <head>
         <title>Módulo 2 - JavaScript - Intermediario</title>
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="./js/script.js"></script>
     </head>
-    <body>
-        <h2>Módulo 2</h1>
+    <body onload="carregou()">
+        <h2>Módulo 2</h2>
         <br/><br/>
         <!-------------------------------------------------------->
         <!-------------------------------------------------------->
@@ -29,6 +29,24 @@
         <input type="text" onkeydown="apertarTecla(event)";
         onkeyup="soltouTecla(event)";
         onkeypress="pressionou(event)";/>
+
+        <!-------------------------------------------------------->
+        <!-------------------------------------------------------->
+
+        <h4>Eventos de formulário</h4>
+
+        <form method="POST" onsubmit="return false">
+
+            <input type="text" name="nome" onfocus="focado()" onblur="desfocado()"><br/><br/>
+            <select name="jogo" onchange="selecionada(this);">
+                <option>LOL</option>
+                <option>DOTA 2</option>
+                <option>GTA 5</option>
+                <option>CyberBug 2077</option>
+            </select><br/><br/>
+            <input type="submit" value="enviar">
+
+        </form>
 
     </body>
 </html>

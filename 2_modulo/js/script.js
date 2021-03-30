@@ -67,3 +67,38 @@ function soltouTecla(event){
 function pressionou(event){
     console.log("Tecla apertada");
 }
+
+/*
+    TÓPICO: Eventos da página
+*/
+
+//onload
+function carregou(){
+    //alert("Página carregada");
+}
+
+
+/*
+    TÓPICO: Eventos Formulário
+*/
+
+//onfocus = foca
+function focado() {
+    console.log("Focado");
+}
+
+//onblur => desfoca
+function desfocado() {
+    console.log("Desfocado");
+}
+
+//onchange => pega a opção selecionada
+
+function selecionada(objeto) {
+    console.log("Selecionou: "+objeto.value);
+}
+
+//onsubmit = evento ao enviar
+function enviado() {
+    console.log("Enviado");
+}
