@@ -39,3 +39,31 @@ function mouseDireito(){
 
 //para bloquear a ação de um click bastar colocar "return false" e ajustar o html para esperar um retorno
 
+
+/*
+    TÓPICO: Eventos do mouse
+*/
+
+
+//onkeydown => apertar tecla
+function apertarTecla(event){
+    console.log("Apertou a tecla "+event.keyCode);
+
+    if(event.shiftKey == true){
+        console.log("SHIFT");
+    }
+    if(event.ctrlKey == true){
+        console.log("CTRL");
+    }
+
+}
+
+//onkeyup => soltar tecla
+function soltouTecla(event){
+    console.log("Soltou a tecla "+event.keyCode)
+}
+
+//onkeypress => pressionou a tecla
+function pressionou(event){
+    console.log("Tecla apertada");
+}
