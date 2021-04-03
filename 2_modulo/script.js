@@ -102,3 +102,51 @@ function selecionada(objeto) {
 function enviado() {
     console.log("Enviado");
 }
+
+/*
+    TÓPICO: Manipulação de data
+*/
+
+var data = new Date(); // data atual
+var pdata = new Date(Date.parse("March 30, 2021")); // passa uma data
+
+var hora = data.getHours() //hora 
+
+var numero = data.getDay(); // dia da semana em numero
+var dia = data.getDate(); //numero do dia do mes
+var ano = data.getFullYear(); // ano
+
+var formato = data.getDate()+"/"+(data.getMonth()+1)+"/"+data.getFullYear();
+
+var dias = ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"];
+
+var minhadata = new Date();
+
+var meuDia = minhadata.setDate("12");
+var meuMes = minhadata.setMonth("5");
+var meuAno = minhadata.setFullYear("2019");
+
+var minhadata2 =minhadata.getDate()+"/"+(minhadata.getMonth()+1)+"/"+minhadata.getFullYear();
+
+
+/*
+    TÓPICO: Validacao Formularios
+*/
+
+function validar(){
+    var valor = document.getElementById("numero").value;
+    var nome = document.getElementById("nome").value;
+
+    if(valor.length > 2){
+        alert("Digite 2 ou menos números!");
+        document.formulario.numero.focus();
+        return false;
+    }else if(nome.length < 3){
+        alert("Digite um nome maior!");
+        document.formulario.nome.focus();
+        return false;
+    } else{
+        alert("Formulário envidado!");
+        return true;
+    }
+}

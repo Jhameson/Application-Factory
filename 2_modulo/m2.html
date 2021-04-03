@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Módulo 2 - JavaScript - Intermediario</title>
-        <script type="text/javascript" src="./js/script.js"></script>
+        <script type="text/javascript" src="script.js"></script>
     </head>
     <body onload="carregou()">
         <h2>Módulo 2</h2>
@@ -37,7 +37,7 @@
 
         <form method="POST" onsubmit="return false">
 
-            <input type="text" name="nome" onfocus="focado()" onblur="desfocado()"><br/><br/>
+            <input type="text" name="nome"  onblur="desfocado()"><br/><br/>
             <select name="jogo" onchange="selecionada(this);">
                 <option>LOL</option>
                 <option>DOTA 2</option>
@@ -48,5 +48,16 @@
 
         </form>
 
+        <!-------------------------------------------------------->
+        <!-------------------------------------------------------->
+
+        <h4>Manipulação de Datas</h4>
+        
+        <h4>Validação de Formulario</h4>
+        <form method="POST" name="formulario" onsubmit="return validar()">
+            Digite dois numeros: <input type="text" name="numero" id="numero"/><br/><br/>
+            Digite seu nome: <input type="text" name="nome" id="nome"/><br/><br/>
+            <input type="submit" value="enviar" />
+        </form>
     </body>
 </html>
