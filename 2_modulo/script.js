@@ -149,4 +149,23 @@ function validar(){
         alert("Formulário envidado!");
         return true;
     }
+    
 }
+
+/*
+    TÓPICO: Temporizadores
+*/
+
+function acao() {
+    document.write("Executando...<br/>");
+}
+
+//executa de tempo em tempo
+
+// var timer = setInterval(acao,1000);
+
+//encerra a funcao acima se estiver atribuida a uma variavel
+//clearInterval(acao);
+
+//espera um tempo para executar (somente uma vez)
+//setTimeout(acao, 3000);
