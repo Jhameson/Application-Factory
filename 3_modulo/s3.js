@@ -1,3 +1,5 @@
+
+
 /*
     Tópico: Diferença entre var , let e const 
 */
@@ -98,3 +100,46 @@ function cadastrar(usuarios, ...novosUsuarios) {
 }
 let usuarios = ["u1","u2"];
 let novosUsuarios = cadastrar(usuarios, "u3", "u4");
+
+/*
+    TÓPICO: Operacoes com array
+*/
+
+const lista1 = [1,2,3,4,5,6];
+
+//o map aplica uma função em cada item de uma lista
+const novaLista = lista1.map(function (itens) {
+    return itens * 5;
+});
+
+console.log("map "+novaLista);
+
+// reduce soma os itens da lista
+
+const soma = lista1.reduce(function(total, proximo) {
+    return total + proximo;
+})
+
+console.log("reduce: "+soma);
+
+//find - encontra o item na lista
+
+const encontrar = lista1.find(function(itens) {
+    return 6 === itens;
+});
+
+console.log("find "+encontrar);
+
+/*
+    TÓPICO: Funções Anonimas
+*/
+
+function adicionar(...numeros) {
+    let valores = numeros.reduce((total, proximo) =>{
+        let soma = total + proximo;
+        return soma;
+    });
+    console.log("Anonima: "+valores);
+}
+adicionar(1,2,3,4,5,6,7,8,9);
+
