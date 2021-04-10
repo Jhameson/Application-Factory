@@ -135,6 +135,7 @@ console.log("find "+encontrar);
 */
 
 function adicionar(...numeros) {
+    // reduce soma os itens da lista
     let valores = numeros.reduce((total, proximo) =>{
         let soma = total + proximo;
         return soma;
