@@ -1,5 +1,9 @@
 /*
-    TÓPICO: Eventos do mouse
+    ###########################################################
+    #                                                         #
+    #               TÓPICO: Eventos do mouse                  #
+    #                                                         #
+    ###########################################################
 */
 
 //onmousedown => evento apertar o botão do mouse
@@ -41,7 +45,11 @@ function mouseDireito(){
 
 
 /*
-    TÓPICO: Eventos do mouse
+    ###########################################################
+    #                                                         #
+    #               TÓPICO: Eventos do TEclado                #
+    #                                                         #
+    ###########################################################
 */
 
 
@@ -69,7 +77,11 @@ function pressionou(event){
 }
 
 /*
-    TÓPICO: Eventos da página
+    ###########################################################
+    #                                                         #
+    #               TÓPICO: Eventos do Página                 #
+    #                                                         #
+    ###########################################################
 */
 
 //onload
@@ -104,7 +116,11 @@ function enviado() {
 }
 
 /*
-    TÓPICO: Manipulação de data
+    ###########################################################
+    #                                                         #
+    #               TÓPICO: Manipulação de datas              #
+    #                                                         #
+    ###########################################################
 */
 
 var data = new Date(); // data atual
@@ -130,7 +146,11 @@ var minhadata2 =minhadata.getDate()+"/"+(minhadata.getMonth()+1)+"/"+minhadata.g
 
 
 /*
-    TÓPICO: Validacao Formularios
+    ###########################################################
+    #                                                         #
+    #               TÓPICO: Validação de formulários          #
+    #                                                         #
+    ###########################################################
 */
 
 function validar(){
@@ -153,7 +173,12 @@ function validar(){
 }
 
 /*
-    TÓPICO: Temporizadores
+    ###########################################################
+    #                                                         #
+    #               TÓPICO: Temporizadores                    #
+    #                                                         #
+    ###########################################################
+    
 */
 
 function acao() {
