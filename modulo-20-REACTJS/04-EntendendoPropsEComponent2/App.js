@@ -1,48 +1,41 @@
-import React, {Component} from 'react';
+/*
+    Nesta aula foi aprendido que um componente pode chamar o outro e que onde ele foi chamado
+    posso ter uma props para um e para o outro não (vai depender se quero passar)
 
-//clas component =>
-// posso ter ciclo de vida
-// funções
-// estados
+*/
 
 
-// é um componente e uma classe
 
-//ja tem acesso as props
-class Equipe extends Component{
-    render(){
-        return(
-             //aqui dentro colocamos o codigo jsx
-             //precisam estar dentro de um componente pai
-             <div>
-                 <Sobre nome={this.props.nome} cargo={this.props.cargo} idade={this.props.idade}/>
-                 <Social github={this.props.github}/>
-                 <hr/>
-             </div>
-        );
-    }
-}
-class Sobre extends Component{
-    render(){
-        return(
-             //aqui dentro colocamos o codigo jsx
-             //precisam estar dentro de um componente pai
-             <div>
-                 <h2>Olá, sou o {this.props.nome}</h2>
-                 <h3>Cargo: {this.props.cargo}</h3>
-                 <h3>Cargo: {this.props.idade}</h3>
-                 
-             </div>
-        );
-    }
+import React from 'react';
+
+
+const Equipe = (props) => {
+    return (
+        <div>
+            <Sobre nome={props.nome} cargo={props.cargo} idade={props.idade}/>
+            <Social  github={props.github}/>
+            <hr/>
+        </div>
+    );
 }
 
-//isto é componente => componenentes são "burros" 
-
-const Social = (props) => {
+//componente responsaveel por informar os atributos 
+const Sobre = (props) =>{
     return(
         <div>
-            <a href={props.github}>Github</a>
+            <h2>Olá, sou o(a) {props.nome}</h2>
+            <h3>Cargo: {props.cargo}</h3>
+            <h3>Idade: {props.idade}</h3>
+        </div>
+    );
+}
+
+const Social = (props) =>{
+    return(
+        <div>
+            <a>LinkdIn</a>
+            <a>Twitter</a>
+            <a href={props.github}>GitHub</a>
         </div>
     );
 }
@@ -50,9 +43,9 @@ const Social = (props) => {
 function App() {
     return (
         <div>
-            <h1>Conheça a equipe!</h1>
-            <Equipe nome="Lucas" cargp="Dev Front end" idade="21" github="https://github.com/Jhameson/"/>
-            <Equipe nome="Mateus" cargp="Dev Full" idade="24"/>
+            <h1>Conheça nossa equipe: </h1>
+            <Equipe nome="Lucas" cargo="Dev Front" idade="21" github="https://github.com/"/>            
+            <Equipe nome="Luiz" cargo="Tester" idade="22"/>            
         </div>
     );   
 }
